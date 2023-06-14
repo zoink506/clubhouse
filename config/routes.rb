@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   devise_for :users
-  get 'home/index'
   resources :posts, only: [:index, :new, :create]
 
-  root to: "home#index"
+  root to: "posts#index"
 end
