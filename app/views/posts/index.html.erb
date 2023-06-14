@@ -1,0 +1,9 @@
+<h1>Post Index Page</h1>
+
+<%= @posts.each do |post| %>
+  <div>
+    <div><strong><%= post.title %></strong></div>
+    <div><%= post.user.email %></div>
+    <div><%= post.body %></div>
+  </div>
+<% end %>
