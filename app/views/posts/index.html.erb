@@ -3,7 +3,9 @@
 <%= @posts.each do |post| %>
   <div>
     <div><strong><%= post.title %></strong></div>
-    <div><%= post.user.email %></div>
+
+    <%= content_tag(:div, post.user.email) if !current_user.nil? %>
+
     <div><%= post.body %></div>
   </div>
 <% end %>
